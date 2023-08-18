@@ -1,0 +1,14 @@
+.right-click-option {
+  color: black;
+}
+
+.option-dropdown-item {
+  height: 30px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.option-dropdown-item:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}

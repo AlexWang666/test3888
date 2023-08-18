@@ -1,0 +1,143 @@
+import bcrypt
+import psycopg2
+from flask import jsonify, request
+from flask_jwt_extended import (
+    create_access_token,
+    create_refresh_token,
+    get_jwt_identity,
+    jwt_required,
+    set_access_cookies,
+    set_refresh_cookies,
+    unset_refresh_cookies,
+)
+
+from ..core import db_conn
+from . import auth_blueprint
+
+
+@auth_blueprint.route("/api/register", methods=["POST"])
+def register():
+    """
+    Registers a user on Searten.
+
+    Receives email, first name, last name and password in the request payload.
+    """
+
+    data = request.get_json()
+
+    try:
+        email = data["email"]
+        first_name = data["first_name"]
+        last_name = data["last_name"]
+        password = data["password"]
+    except KeyError:
+        raise KeyError("Not all required fields were sent from the frontend")
+
+    with db_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as db_cursor:
+        db_cursor.execute("SELECT * FROM profile WHERE email = %s", (email,))
+        users = db_cursor.fetchone()
+    if users:
+        return {"msg": "There is already a profile with this email address."}
+
+    with db_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as db_cursor:
+        db_cursor.execute(
+            """insert into profile(first_name, last_name, email, password) values(%s, %s, %s, %s)
+            RETURNING id;""",
+            (
+                first_name,
+                last_name,
+                email,
+                bcrypt.hashpw(password.encode(), bcrypt.gensalt(10)).decode(),
+            ),
+        )
+        id = db_cursor.fetchone()["id"]
+
+        # Creates a blank profile for the user
+        db_cursor.execute(
+            """
+            INSERT INTO profile_info (user_id, bio, education, link)
+            VALUES (%s, %s, %s, %s);
+            """,
+            (id, "", "", ""),
+        )
+        db_conn.commit()
+    return {"msg": "Your profile has successfully been registered. Please log in now."}
+
+
+@auth_blueprint.route("/api/login", methods=["post"])
+def login():
+    """
+    Authenticates a user and grants access to the Searten site.
+
+    Receives an email and a password as URL parameters.
+    Generates an access token and refresh token. The access_token
+    is a short lived and can be stored in memory/local storage in the front-end.
+    The refresh_token is long-lived and should be stored as a HTTPOnly
+    cookie.
+
+    :return: Fields from the `profile` table and the access_token
+    rtype: dict
+    """
+
+    data = request.get_json()
+
+    try:
+        email = data["email"]
+        password = data["password"]
+    except KeyError:
+        raise KeyError("Not all required fields were sent from the frontend")
+
+    with db_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as db_cursor:
+        db_cursor.execute("select * from profile where email = %s", (data["email"],))
+        user = db_cursor.fetchone()
+    if not user:
+        raise Exception("No profile matches this email: ", email)
+
+    if user and user["email"] == email and bcrypt.checkpw(password.encode(), user["password"].encode()):
+        access_token = create_access_token(identity=user)
+        refresh_token = create_refresh_token(identity=user)
+        response = jsonify(
+            {
+                "id": user["id"],
+                "first_name": user["first_name"],
+                "last_name": user["last_name"],
+                "access_token": access_token,
+            }
+        )
+        set_access_cookies(response, access_token)
+        set_refresh_cookies(response, refresh_token)
+        return response
+
+    return jsonify({"msg": "Incorrect login details."}), 401
+
+
+@auth_blueprint.route("/api/logout", methods=["POST"])
+def logout():
+    """
+    Logs a user out of Searten.
+
+    Requires a refresh_token and a csrf_refresh_token
+    (should be sent in the header 'X-CSRF-TOKEN'). This function removes
+    the refresh_token from HTTPOnly cookies. The access token will be removed
+    from memory/local storage in the frontend.
+    """
+
+    response = jsonify({"msg": "Logout successful"})
+    unset_refresh_cookies(response)
+    return response
+
+
+@auth_blueprint.route("/api/refresh_access_token", methods=["POST"])
+@jwt_required(refresh=True, verify_type=True)
+def refresh_access_token():
+    """
+    Given a valid refresh_token, generates and returns a new access_token.
+
+    :return: A dictionary containing the new access_token
+    :rtype: dict
+    """
+
+    identity = get_jwt_identity()
+    access_token = create_access_token(identity=identity)
+    response = jsonify({"access_token": access_token})
+    return response, 200

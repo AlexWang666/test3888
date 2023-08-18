@@ -1,0 +1,21 @@
+--2023-01-26 05:58:58--  https://drive.google.com/u/0/uc?id=1yP2e1mHid7z0hM0u6lpZ6ddDSSv6xJIQ
+Resolving drive.google.com (drive.google.com)... 142.250.204.14, 2404:6800:4006:80b::200e
+Connecting to drive.google.com (drive.google.com)|142.250.204.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://drive.google.com/uc?id=1yP2e1mHid7z0hM0u6lpZ6ddDSSv6xJIQ [following]
+--2023-01-26 05:58:58--  https://drive.google.com/uc?id=1yP2e1mHid7z0hM0u6lpZ6ddDSSv6xJIQ
+Reusing existing connection to drive.google.com:443.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://doc-0g-9c-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/l7vcvdmccjbrccpgdice9vmang0gg4t9/1674712725000/04574325337484200445/*/1yP2e1mHid7z0hM0u6lpZ6ddDSSv6xJIQ?uuid=e10f71d0-e645-461b-8c9b-aebea97b5c04 [following]
+Warning: wildcards not supported in HTTP.
+--2023-01-26 05:58:59--  https://doc-0g-9c-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/l7vcvdmccjbrccpgdice9vmang0gg4t9/1674712725000/04574325337484200445/*/1yP2e1mHid7z0hM0u6lpZ6ddDSSv6xJIQ?uuid=e10f71d0-e645-461b-8c9b-aebea97b5c04
+Resolving doc-0g-9c-docs.googleusercontent.com (doc-0g-9c-docs.googleusercontent.com)... 142.250.67.1, 2404:6800:4006:80f::2001
+Connecting to doc-0g-9c-docs.googleusercontent.com (doc-0g-9c-docs.googleusercontent.com)|142.250.67.1|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1150374 (1.1M) [text/csv]
+Saving to: ‘uc?id=1yP2e1mHid7z0hM0u6lpZ6ddDSSv6xJIQ’
+
+               uc?id=1yP2e1mH   0%[                                                  ]       0  --.-KB/s                             uc?id=1yP2e1mHi   6%[==>                                               ]  77.31K   347KB/s                            uc?id=1yP2e1mHid  31%[==============>                                   ] 349.31K   824KB/s               uc?id=1yP2e1mHid7z0hM0u6lpZ6d 100%[=================================================>]   1.10M  1.88MB/s    in 0.6s    
+
+2023-01-26 05:59:00 (1.88 MB/s) - ‘uc?id=1yP2e1mHid7z0hM0u6lpZ6ddDSSv6xJIQ’ saved [1150374/1150374]
+

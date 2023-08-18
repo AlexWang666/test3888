@@ -1,0 +1,6 @@
+{
+    "api_ip_address": "localhost",
+    "api_port": "5000", 
+    "frontend_ip_address": "localhost",
+    "frontend_port": "3000"
+}

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "quill-image-drop-module": "^1.0.3",
+    "quill-to-pdf": "^1.0.7",
+    "react-quill": "^2.0.0",
+    "uuid": "^9.0.0"
+  }
+}

@@ -1,0 +1,73 @@
+.file-folder-rectangle {
+  background-color: white;
+  margin: 1rem;
+
+  padding: 1rem;
+  width: 15rem;
+
+  border-radius: 0.5em;
+  border: 1px solid #dadadd;
+}
+
+.file-folder-rectangle:hover {
+  cursor: pointer;
+}
+
+/*
+ * Right now, clicking a child component still highlights the
+ * borders of the drive item. Not sure how to get around this
+ * so I've commented it out for now.
+ *
+.file-folder-rectangle:active {
+  border: 1px solid var(--primary);
+}
+*/
+
+.file-name {
+  font-weight: 600;
+}
+
+.file-folder-icon {
+  font-size: 70%;
+  font-weight: 650;
+
+  padding: 0.3rem;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+  margin-left: 0.1rem;
+}
+
+#project-file-type {
+  color: #006bb3;
+  background-color: #ccebff;
+}
+
+#doc-file-type {
+  color: #b35900;
+  background-color: #ffd9b3;
+}
+
+#sheet-file-type {
+  color: #00994d;
+  background-color: #ccffe6;
+}
+
+#folder-file-type {
+  color: #7733ff;
+  background-color: #eee6ff;
+}
+
+.file-folder-paragraph {
+  font-size: 80%;
+  color: #6a7881;
+}
+
+#file-icon-column {
+  width: 3.5rem;
+}
+
+.navigation-p {
+  font-size: 120%;
+  font-weight: 550;
+  color: #6a7881;
+}

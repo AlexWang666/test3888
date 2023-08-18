@@ -1,0 +1,81 @@
+.marketplace-box-rectangle {
+	background-color: white;
+	margin: 0.9rem;
+
+	padding: 1rem;
+	width: 15rem;
+	height: 19rem;
+
+	border-radius: 0.5em;
+	border: 1px solid #DADADD;
+}
+
+.marketplace-box-rectangle:hover {
+	background-color: #FAFBFC;
+	cursor: pointer;
+}
+
+.marketplace-box-rectangle:active {
+	border: 1px solid var(--primary);
+}
+
+.project-name {
+	font-weight: 600;
+}
+
+.project-type-icon {
+	font-size: 70%;
+	font-weight: 650;
+
+	padding: 0.3rem;
+	border-radius: 0.7rem;
+	margin-bottom: 1rem;
+	margin-left: auto;
+}
+
+#program-type {
+	color: #b35900;
+	background-color: #ffd9b3;
+}
+
+#project-type {
+	color: #00994d;
+	background-color: #ccffe6;
+}
+
+#funding-type {
+	color: #7733ff;
+	background-color: #eee6ff;
+}
+
+#marketplace-pfp {
+	width: 2.2em;
+	height: 2.2em;
+	margin-right: 1em;
+}
+
+.marketplace-box-paragraph {
+	font-size: 80%;
+	color: #6A7881;
+
+	height: 3.5rem;
+	width: 100%;
+	overflow-y: hidden;
+
+	align-self: center;
+}
+
+.marketplace-author-name {
+	font-size: 80%;
+	color: #6A7881;
+}
+
+.project-box-picture {
+	width: 15rem;
+	height: 9em;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	align-self: center;
+
+	background-color: #DADADD;
+}

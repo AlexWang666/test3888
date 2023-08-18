@@ -1,0 +1,77 @@
+.budget-bar-widget {
+  background-color: white;
+
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+
+  width: 100%;
+  /* height: 7em; */
+
+  border-radius: 0.5em;
+  border: 1px solid #dadadd;
+}
+
+.budget-bar-widget:hover {
+  cursor: pointer;
+  border: 1px solid lightblue;
+}
+
+#budget-progress-bar {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 2em;
+  width: 100%;
+}
+
+.milestone-table-widget {
+  background-color: white;
+
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  width: 100%;
+
+  border-radius: 0.5em;
+  border: 1px solid #dadadd;
+}
+
+.milestone-table-widget:hover {
+  cursor: pointer;
+  border: 1px solid lightblue;
+}
+
+#progress-bar-status-widget {
+  width: 45%;
+}
+
+.heading-task {
+  font-size: 120%;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.heading-milestone {
+  font-size: 120%;
+  font-weight: 500;
+  color: #eb9c34;
+}
+
+/* Variable classnames for due date text */
+.scary-text {
+  color: orchid;
+}
+
+.red-text {
+  color: indianred;
+}
+
+.orange-text {
+  color: #eb9c34;
+}
+
+.green-text {
+  color: #6fcf97;
+}
+
+.ant-typography {
+  margin: 0 !important;
+}

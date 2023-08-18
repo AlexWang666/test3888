@@ -1,0 +1,10 @@
+.header-datum-applications {
+  width: 12%;
+
+  background-color: rgba(224, 249, 255, 255);
+}
+
+.app-members-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

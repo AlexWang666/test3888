@@ -1,0 +1,7 @@
+{
+    "api_ip_address": "127.0.0.1",
+    "api_port": "5000", 
+    "frontend_ip_address": "3.26.223.95",
+    "frontend_port": "80"
+}
+

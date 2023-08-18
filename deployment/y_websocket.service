@@ -1,0 +1,12 @@
+[Unit]
+Description=y-websocket server to sync changes in the document editor
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Searten-API/frontend
+ExecStart=npx y-websocket
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

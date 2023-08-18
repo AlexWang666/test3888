@@ -1,0 +1,15 @@
+#add-cat-box {
+  width: 100%;
+}
+
+.show-budget-row-false {
+  display: none;
+}
+
+#money-remaining-true {
+  color: #6FCF97;
+}
+
+#money-remaining-false {
+  color: indianred;
+}

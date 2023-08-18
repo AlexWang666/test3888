@@ -1,0 +1,29 @@
+.login-page {
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Searten logo at the top of the login box */
+.login-logo {
+    width: 20%;
+    margin: 5px;
+}
+
+.login-box {
+    width: 50%;
+    height: 55%;
+    padding: 2rem;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    border: 1px solid #DADADD;
+}

@@ -1,0 +1,57 @@
+.title-input {
+  border: 1px solid transparent;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  height: 2rem;
+  font-size: 1rem;
+  max-width: 25%;
+  overflow-x: scroll;
+}
+.title-input:hover {
+  border: 1px solid #d0d0d0;
+}
+.title-input:focus {
+  border: 1px solid #939393;
+  outline-color: #0275d8;
+}
+#hide {
+  position: absolute;
+  opacity: 0;
+}
+
+.main-doc-div {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  width:100%;
+  /* Overwriting defaults in projects-page css class */
+  left:0;
+  padding:2%;
+}
+
+#editor-container {
+  align-items:center;
+  justify-content:center;
+  width:21cm;
+}
+
+#editor {
+  justify-content:center;
+  align-items:center;
+  /* Height of A4 page - currently doesn't show individual pages */
+  height:29.7cm;
+}
+
+.dropdown-menu {
+  /* Duplicate code from DropDownMenu.css :/ */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dadadd;
+  border-radius: 0.3em;
+  overflow: hidden;
+  position: absolute;
+  background-color: white;
+  opacity: 1;
+  transition: 500ms;
+  z-index:999;
+}

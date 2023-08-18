@@ -1,0 +1,202 @@
+.list-tasks-side {
+  border-collapse: collapse;
+  /* border: 1px solid #dadadd; */
+
+  width: 142px;
+  /* max-height: 50em; */
+
+  background-color: white;
+  /* overflow-y: auto; */
+  /* border-radius: 10px 0px 0px 10px; */
+  /* height: max-content; */
+  /* height: 100%; */
+}
+
+.planner-row {
+  padding: 10px;
+}
+
+.planner-row-tasks {
+  padding: 4px 12px 5px 10px;
+}
+
+.project-info {
+  margin-left: 1em;
+}
+
+.task-milestone-icon {
+  width: 1em;
+  height: 1em;
+
+  margin-right: 1em;
+}
+
+#icon-task {
+  background-color: lightblue;
+}
+
+#icon-sub-task {
+  background-color: #eee6ff;
+}
+
+#icon-milestone {
+  background-color: #eb9c34;
+  border-radius: 100%;
+}
+
+#milestone-button {
+  margin-left: 5px;
+}
+
+.planner-section {
+  border: 1px solid #dadadd;
+  border-left: none;
+
+  width: 87%;
+  /* height: 50em; */
+  background-color: white;
+  /* overflow: auto; */
+  border-radius: 0px 10px 10px 0px;
+  /* height: 600px; */
+  /* overflow: auto; */
+}
+
+#hover-pointer:hover {
+  cursor: pointer;
+}
+
+.planner-table {
+  min-width: 100%;
+  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 11px;
+}
+
+.planner-datum {
+  /* min-width: 2rem; */
+  /* padding: 0.2rem; */
+  padding: 0px 5px;
+  font-size: 12px;
+}
+
+/* .planner-row {
+  height: 2.4rem;
+} */
+
+.planner-datum-true-task {
+  background-color: lightblue;
+}
+
+.planner-datum-true-milestone {
+  background-color: #eb9c34;
+}
+
+.planner-datum-true-project {
+  background-color: var(--primary);
+}
+
+.planner-item-name {
+  display: none;
+  position: absolute;
+
+  padding: 0.4em;
+  margin-top: -1em;
+
+  background-color: white;
+  border-radius: 2em;
+  box-shadow: 1px 1px 10px;
+  z-index: 2;
+}
+
+#gantt-row-true:hover .planner-item-name {
+  display: block;
+}
+
+.plannerBlock {
+  height: 30px;
+}
+
+/* .planner-datum-true-task:first-child {
+  background-color: red;
+} */
+
+td:nth-child(1 of .planner-datum-true-task) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+td:nth-last-child(1 of .planner-datum-true-task) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+td:nth-child(1 of .planner-datum-true-project) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+td:nth-last-child(1 of .planner-datum-true-project) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+td:nth-child(1 of .planner-datum-true-milestone) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+td:nth-last-child(1 of .planner-datum-true-milestone) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+tbody tr:first-child {
+  background-color: #fff;
+}
+
+table td {
+  border: none;
+}
+
+/* table tbody tr:first-child td {
+  border-style: none none solid none;
+  border-width: 1px;
+  border-color: #000;
+} */
+
+/* .gantt-container { */
+/* height: 71vh; */
+/* } */
+
+.ant-typography {
+  margin-bottom: 0px;
+}
+
+.gantt-container .popup-wrapper {
+  background-color: #fff !important;
+  display: flex;
+  flex-direction: column;
+  padding: 10px !important;
+  width: max-content !important;
+}
+
+.gantt-container .popup-wrapper .subtitle {
+  color: black !important;
+}
+
+.list-tasks-side table {
+  border: 1px solid #dadadd;
+  border-radius: 10px 0px 0px 10px;
+}
+
+svg .bar .cc-orange .bar-group .bar {
+  fill: #ffcc6e !important;
+}
+
+svg .bar .cc-blue .bar-group .bar {
+  fill: lightblue !important;
+}

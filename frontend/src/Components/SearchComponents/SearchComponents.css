@@ -1,0 +1,41 @@
+.person-box-rectangle {
+	background-color: white;
+	margin: 1rem;
+
+	padding: 1rem;
+
+  min-height: 6rem;
+	width: 14.5rem;
+
+	border-radius: 0.5em;
+	border: 1px solid #DADADD;
+}
+
+.person-box-rectangle:hover {
+	background-color: #FAFBFC;
+	cursor: pointer;
+}
+
+.person-box-rectangle:active {
+	border: 1px solid var(--primary);
+}
+
+.people-results-box {
+	background-color: white;
+	position: absolute;
+
+	max-height: 15rem;
+	width: 21rem;
+	overflow-y: auto;
+
+	border: 1px solid #DADADD;
+}
+
+.person-list-rectangle {
+	padding: 1rem;
+}
+
+.person-list-rectangle:hover {
+	cursor: pointer;
+	background-color: rgba(224, 249, 255, 255);
+}

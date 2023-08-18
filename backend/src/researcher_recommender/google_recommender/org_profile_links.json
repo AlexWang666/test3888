@@ -1,0 +1,14 @@
+[
+    {
+        "long_name": "University of New South Wales", "short_name": "UNSW", 
+            "profile_sites": ["https://research.unsw.edu.au/people/*"]	
+    }, 
+    {   
+        "long_name": "University of Technology Sydney", "short_name": "UTS", 
+        "profile_sites": ["https://profiles.uts.edu.au/*"]
+    },
+    {   
+        "long_name": "University of Sydney", "short_name": "USYD", 
+        "profile_sites": ["https://www.sydney.edu.au/*/about/our-people/"]
+    }
+]

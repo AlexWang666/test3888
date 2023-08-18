@@ -1,0 +1,55 @@
+#profile-pic-column {
+  width: 3.5rem;
+  justify-content: center;
+}
+
+.completion-cell {
+  display: flex;
+  flex-direction: row;
+}
+
+.stream-icon-false {
+  font-size: 80%;
+  font-weight: 650;
+
+  color: #006bb3;
+  background-color: #ccebff;
+
+  width: 100%;
+  min-width: fit-content;
+  max-width: fit-content;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.stream-icon-true {
+  font-size: 80%;
+  font-weight: 650;
+
+  color: #00994d;
+  background-color: #ccffe6;
+
+  width: 100%;
+  min-width: fit-content;
+  max-width: fit-content;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th {
+  padding: 7px 7px;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  padding: 7px 7px;
+}
+
+.ant-table-wrapper .ant-table-pagination.ant-pagination {
+  margin: 7px 0;
+}
+
+.ant-table-tbody {
+  cursor: pointer;
+}

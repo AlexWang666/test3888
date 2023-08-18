@@ -1,0 +1,24 @@
+.file-search-table {
+    width: 100%;
+    margin: 1rem 0 0 0;
+
+    border-radius: 0.7em;
+
+    background-color: #1F98DC;
+    border-collapse: collapse;
+
+    color: white;
+    font-weight: 550;
+}
+
+.file-search-table td {
+    padding: 1.5rem;
+}
+
+.form-elements-data-files {
+    padding: 0.3rem;
+    margin-left: 1rem;
+
+    border-radius: 0.5em;
+    border: 0px solid black;
+}

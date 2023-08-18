@@ -1,0 +1,26 @@
+.loading-icon {
+    width: 100%;
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10%;
+}
+
+
+.project-desc-textbox {
+    width: 100%;
+    height: 10rem;
+
+    padding: 0.5rem;
+    margin: 1rem 0 1rem 0;
+
+    border: 1px solid #dadadd;
+    border-radius: 0.3em;
+
+    font-size: 120%;
+
+    justify-content: top;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}

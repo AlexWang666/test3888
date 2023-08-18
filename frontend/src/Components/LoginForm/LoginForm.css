@@ -1,0 +1,77 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* The login button */
+.login-button-2 {
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    padding: 8px;
+    margin: -10px 10px 10px 10px;
+
+    font-size: 14px;
+    color: white;
+
+    width: 90%;
+    height: 34px;
+
+    background-color: var(--primary);
+
+    justify-content: center;
+    align-self: center;
+    
+    background-color: #384bfc;
+    border: 1px solid #384bfc;
+}
+
+.login-button-2:hover {
+    cursor: pointer;
+
+    background-color: #384bfc;
+    border: 1px solid #384bfc;
+}
+
+/* The register section at the bottom */
+.register-text {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.incorrect-login-text {
+    font-size: 12px;
+    color: deepskyblue;
+    margin-left: auto;
+    margin: 5px;
+}
+
+#login-text {
+  min-height: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.register-button {
+    font-size: 12px;
+    color: deepskyblue;
+
+    background-color: white;
+    border: 0px;
+}
+
+.register-button:hover {
+    cursor: pointer;
+}
+
+.text-input{
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: var(--dark);
+    padding: 8px;
+    margin: 10px;
+}
+
+.text-input:focus{
+    border: 1px solid var(--primary-highlight);
+    outline:0;
+}

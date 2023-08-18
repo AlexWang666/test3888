@@ -1,0 +1,12 @@
+[Unit]
+Description=Searten Flask API
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Searten-API/backend
+ExecStart=/home/ubuntu/Searten-API/backend/venv/bin/gunicorn -b 127.0.0.1:5000 wsgi:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

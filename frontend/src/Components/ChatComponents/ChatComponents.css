@@ -1,0 +1,143 @@
+/* List of notes pages on the side */
+.list-messages-side {
+	border-collapse: collapse;
+	border: 1px solid #DADADD;
+
+	width: 25%;
+	height: 82.2vh;
+
+	background-color: white;
+	overflow-y: auto;
+}
+
+.list-messages-side td {
+	padding: 0.8em;
+	align-items: center;
+
+	border-bottom: 1px solid #DADADD;
+}
+
+.list-messages-side tr {
+	height: 70px;
+}
+
+.list-messages-side tr:not(:first-child):hover {
+	cursor: pointer;
+  	background-color: #fafbfc;
+}
+
+.list-messages-table {
+	width: 100%;
+}
+
+#message-top-row {
+	align-items: center;
+	color: black;
+	font-size: 120%;
+}
+
+#message-preview {
+	height: 42px;
+	overflow: hidden;
+}
+
+.message-history-table {
+	border-collapse: collapse;
+	border: 0.5px solid #DADADD;
+	border-left: none;
+
+	width: 80%;
+	height: 82.5vh;
+
+	background-color: white;
+}
+
+.message-history-table td {
+	padding: 0 0.8em 0 0.8em;
+	align-items: center;
+}
+
+.chat-space {
+	height: 58vh;
+}
+
+.chat-history-case {
+	height: 100%;
+	padding: 0.5em;
+	overflow-y: auto;
+}
+
+#chat-input {
+	width: 83%;
+	height: 30px;
+	font-size: 100%;
+	padding: 5px;
+
+	border-radius: 0.4em;
+}
+
+#send-button {
+	width: 15%;
+	height: 40px;
+	margin-left: 2%;
+	border-radius: 0.4em;
+
+	align-self: center;
+}
+
+.chat-man {
+	margin-top: 1em;
+}
+
+#chatticus-true {
+	justify-content: right;
+}
+
+.chateal-buble {
+	padding: 0.5em;
+	margin: 0em 0em 1em 0em;
+	color: black;
+
+	word-break: break-word;
+}
+
+#chatael-buble-false {
+	border-radius: 0em 0.4em 0.4em 0.4em;
+	background-color: #ccebff;
+}
+
+#chatael-buble-true {
+	border-radius: 0.4em 0em 0.4em 0.4em;
+	background-color: #eee6ff;
+}
+
+.message-and-author {
+	width: 50%;
+	margin-left: 1em;
+}
+
+#author-line {
+	margin-bottom: 1em;
+}
+
+#pfp-isuser-true {
+	display: none;
+}
+
+.reg-chat-true {
+	background-color: rgba(224, 249, 255, 255);
+}
+
+.search-results-chat {
+	height: 12vh;
+	overflow-y: auto;
+}
+
+.users-in-chat {
+	margin-left: 2rem;
+}
+
+.users-in-chat-list {
+	background-color: white;
+	position: absolute;
+}

@@ -1,0 +1,104 @@
+.task-box-rectangle {
+	background-color: white;
+	margin: 0.9rem;
+
+	padding: 1rem;
+	width: 15rem;
+	height: 13rem;
+
+	border-radius: 0.5em;
+	border: 1px solid #DADADD;
+}
+
+.task-box-rectangle:hover {
+	border: 1px solid lightblue;
+  cursor: pointer;
+}
+
+.task-box-paragraph {
+	font-size: 80%;
+	color: #6A7881;
+
+	height: 5.5rem;
+	width: 100%;
+	overflow-y: hidden;
+
+	align-self: center;
+}
+
+.task-name {
+	font-weight: 600;
+}
+
+.task-type-icon {
+	font-size: 70%;
+	font-weight: 650;
+
+	padding: 0.3rem;
+	border-radius: 0.7rem;
+	margin-bottom: 1rem;
+}
+
+#task-type {
+  color: #006bb3;
+	background-color: #ccebff;
+}
+
+#milestone-type {
+  color: #b35900;
+	background-color: #ffd9b3;
+}
+
+.task-info-page {
+    width: 95%;
+    height: 100vh;
+		margin-top: -70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+		position: absolute;
+		z-index: 1;
+}
+
+.task-info-box {
+    width: 50%;
+    padding: 2rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);    
+
+    display: flex;
+    flex-direction: column;
+		position: absolute;
+		z-index: 1;
+
+    border-radius: 0.5em;
+    border: 1px solid #DADADD;
+		background-color: white;
+}
+
+.task-checkbox {
+	height: 1.8em;
+	width: 1.8em;
+
+	margin-left: 1em;
+	margin-top: 0.2em;
+}
+
+.close-button {
+	width: 8px;
+	height: 8px;
+	margin-top: -1em;
+}
+
+.close-button:hover {
+	cursor: pointer;
+}
+
+#new-subtask-button {
+	padding: 5px;
+	font-size: 90%;
+}

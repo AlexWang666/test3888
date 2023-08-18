@@ -1,0 +1,22 @@
+#author-marketplace-pfp {
+	margin-right: 1rem;
+}
+
+.button-bois {
+	display: flex;
+	width: 20rem;
+}
+
+#marketplace-progress {
+	width: 20rem;
+	margin-right: 1rem;
+}
+
+.marketplace-project-desc {
+	width: 96%;
+	padding: 2%;
+
+	background-color: white;
+	border: 1px solid #DADADD;
+	border-radius: 0.5em;
+}

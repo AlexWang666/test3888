@@ -1,0 +1,32 @@
+.page-not-found-page {
+  width: 95%;
+  height: 100vh;
+
+  padding-left: 5em;
+  padding-top: 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-not-found-box {
+  width: 70%;
+  height: 70vh;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+  border: 1px solid #DADADD;
+  padding: 2em;
+}
+
+.page-not-found-logo {
+  width: 10%;
+  margin-bottom: 5em;
+}

@@ -1,0 +1,489 @@
+/* COLOURS
+- Very Light grey (background): #FAFBFC;
+- Light grey (borders): #DADADD;
+- Dark grey (headings): #515467;
+- In between grey (subheadings): #6A7881;
+
+- Orange: #EB9C34;
+- Blue (lighter): #1F98DC;
+- Light Blue: rgba(224, 249, 255, 255);
+- Green: #6FCF97;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* ALIGN RIGHT */
+/*
+   Useful for aligning something to the right.
+   Must be in a flexbox div.
+*/
+#align-right {
+  margin-left: auto;
+}
+
+#align-centre {
+  align-self: center;
+}
+
+/* BOXES HOLDER */
+/*
+   Style used for any layout with tiles / boxes.
+   Boxes are evenly spaced and wrap underneath.
+*/
+.boxes-holder {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+boxes-holder:active {
+  background-color: yellow;
+}
+
+/* CENTRE DIV */
+/*
+   A div with everything centred.
+*/
+.centred-div {
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* DEFAULT FORM INPUT */
+/*
+   The default styling applied to various form input types.
+*/
+.default-form-text-small {
+  width: 95%;
+  height: 1.5rem;
+
+  padding: 0.5rem;
+  margin: 1rem 0 1rem 0;
+
+  border: 1px solid #dadadd;
+  border-radius: 0.3em;
+
+  font-size: 90%;
+
+  justify-content: top;
+}
+
+.default-form-text-large {
+  width: 95%;
+  height: 10rem;
+
+  padding: 0.5rem;
+  margin: 1rem 0 1rem 0;
+
+  border: 1px solid #dadadd;
+  border-radius: 0.3em;
+
+  font-size: 90%;
+
+  justify-content: top;
+}
+
+/* DEFAULT HEADINGS */
+/*
+   The default heading styles to be used for ALL headings.
+*/
+.default-heading {
+  font-size: 200%;
+  font-weight: 550;
+  color: #515467;
+}
+
+.default-heading-2 {
+  font-size: 160%;
+  font-weight: 500;
+  color: #515467;
+}
+
+.default-heading-3 {
+  font-size: 140%;
+  font-weight: 500;
+  color: #515467;
+}
+
+.default-heading-4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  /* color: var(--primary); */
+}
+
+/* DEFAULT PARAGRAPH */
+/*
+   The default paragraph styles to be used for ALL paragraphs.
+*/
+.default-paragraph {
+  font-size: 100%;
+  color: #6a7881;
+}
+
+.default-paragraph-2 {
+  font-size: 120%;
+}
+
+.default-paragraph-3 {
+  font-size: 85%;
+}
+
+.default-paragraph-4 {
+  font-size: 14px;
+  color: black;
+  font-weight: 520;
+}
+
+.default-paragraph-5 {
+  font-size: 100%;
+  color: var(--primary);
+}
+
+/* DEFAULT PROGRESS BAR */
+/*
+   The main progress bar style.
+   Light grey background, green foreground.
+*/
+.default-progress-bar[value]::-webkit-progress-bar {
+  background-color: #f1f2f3;
+}
+
+.default-progress-bar[value]::-webkit-progress-value {
+  background-color: #6fcf97;
+}
+
+.default-progress-bar {
+  margin-right: 2rem;
+  border-radius: 3em;
+  width: 90%;
+}
+
+/* DEFAULT TABLE */
+/*
+   The main table style.
+   Light grey headings, dark grey bold row headers.
+   No column lines. Light grey row lines.
+*/
+.default-table {
+  width: 100%;
+  margin: 1rem 0 0 0;
+  table-layout: fixed;
+
+  padding: 0.5rem;
+
+  background-color: white;
+  border: 1px solid #dadadd;
+  border-collapse: collapse;
+}
+
+.default-table td {
+  padding: 1.5rem;
+
+  font-size: 100%;
+  color: #6a7881;
+
+  border-bottom: 1px solid #dadadd;
+}
+
+.default-table th {
+  padding: 1.5rem;
+
+  font-size: 110%;
+  text-align: left;
+
+  border-bottom: 1px solid #dadadd;
+}
+
+/* Removes the bottom border from the table */
+.default-table tr:last-child > td {
+  border-bottom: none;
+}
+
+.default-table tr:last-child > th {
+  border-bottom: none;
+}
+
+/* INVISIBLE TABLE */
+/*
+   An invisible table useful for spacing things next to each other.
+*/
+.invisible-table {
+  width: 100%;
+  padding: 0.5rem;
+  table-layout: fixed;
+
+  background-color: rgb(0, 0, 0, 0);
+}
+
+.invisible-table td {
+  padding: 1rem;
+}
+
+/* CLICKABLE TABLE */
+/*
+   Use this ID when the table should have clickable rows.
+   Excludes the first row.
+*/
+#clickable-table tr:not(:first-child):hover {
+  cursor: pointer;
+  background-color: #fafbfc;
+}
+
+#clickable-table-allrows tr:hover {
+  cursor: pointer;
+  background-color: #fafbfc;
+}
+
+/* DEFAULT BUTTON */
+/*
+   The main button used at the top of pages.
+   Grey border, dark grey text.
+*/
+.default-button {
+  padding: 0.5rem;
+
+  font-size: 100%;
+  color: #515467;
+
+  background-color: white;
+  border: 1px solid #dadadd;
+  border-radius: 0.2em;
+}
+
+.default-button:hover {
+  cursor: pointer;
+}
+
+.default-button:active {
+  border: 1px solid var(--primary);
+}
+
+.default-button:disabled {
+  background: #f5f5f5;
+  color: #c3c3c3;
+}
+
+/* DEFAULT BUTTON 2 */
+/*
+   A button typically used for more options.
+   Blue bottom border. Blue text.
+*/
+.default-button-2 {
+  padding: 0.5rem;
+
+  font-size: 100%;
+  color: var(--primary);
+
+  background-color: rgb(0, 0, 0, 0);
+
+  border-bottom: 2px solid lightblue;
+
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px;
+}
+
+.default-button-2:hover {
+  cursor: pointer;
+}
+
+.default-button-2:active {
+  color: #515467;
+  border-bottom: 2px solid #515467;
+}
+
+/* DEFAULT BUTTON 3 */
+/*
+   A button typically used for more options.
+   Grey bottom border. Grey text.
+*/
+.default-button-3 {
+  padding: 0.5rem;
+
+  font-size: 100%;
+  color: #515467;
+
+  background-color: rgb(0, 0, 0, 0);
+
+  border-bottom: 2px solid #dadadd;
+
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px;
+}
+
+.default-button-3:hover {
+  cursor: pointer;
+}
+
+.default-button-3:active {
+  color: #515467;
+  border-bottom: 2px solid #515467;
+}
+
+/* DEFAULT BUTTON 4 */
+/*
+   Similar to default button 1.
+   White border, blue background, white text.
+*/
+.default-button-4 {
+  padding: 0.5rem;
+
+  font-size: 100%;
+  color: black;
+
+  background-color: rgb(224, 249, 255);
+  border: 1px solid rgb(224, 249, 255);
+  border-radius: 0.2em;
+}
+
+.default-button-4:hover {
+  cursor: pointer;
+}
+
+.default-button-4:active {
+  border: 1px solid var(--primary);
+}
+
+/* DEFAULT BUTTON 5 */
+/*
+ * Transparent button
+*/
+.default-button-5 {
+  padding: 0.5rem;
+  font-size: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.default-button-5:hover {
+  cursor: pointer;
+}
+
+/* LINK */
+/*
+  On hover, adds an underline.
+*/
+#link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* PROFILE PICTURE */
+/*
+   The circular div used to contain the default profile picture.
+*/
+.profile-picture {
+  height: 3em;
+  width: 3em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+  background-color: #dadadd;
+}
+
+/* PROJECTS PAGE */
+/*
+   The default page styling.
+   Used for most pages except the login.
+
+   Header z-index: 1
+   Navbar z-index: 0
+   Page z-index: -1
+
+   Width of closed navbar: 5rem
+   Padding: 4% top and bottom
+   Therefore, height should be 90vh
+*/
+.projects-page {
+  position: absolute;
+  z-index: 0;
+  padding: 2% 2% 2% 5.8%;
+  width: 80%;
+  left: 22vh;
+
+  color: #515467;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* SEARCH BAR */
+/*
+   The default search bar.
+   Right-aligned in a flexbox.
+*/
+.search-bar {
+  height: 1rem;
+  width: 20rem;
+
+  padding: 0.5rem;
+  margin: 0 0 0 3rem;
+  margin-left: auto;
+  align-self: center;
+
+  font-size: 100%;
+  color: #515467;
+
+  background-color: white;
+  /* border: 1px solid #dadadd;
+  border-radius: 0.2em; */
+}
+
+/* UPPER ELEMENTS */
+/*
+   Contains the upper elements on all pages.
+   Includes the heading, any buttons and the search bar.
+
+   NOTE: This is just a flexbox and is used anytime I want a flex boi.
+*/
+.upper-elements {
+  display: flex;
+  flex-direction: row;
+  /* height: 600px; */
+}
+
+.upper-elements-centred {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  height: 29px;
+}
+
+.upper-elements-overflow {
+  display: flex;
+  overflow-x: auto;
+}
+
+.upper-elements-overflow::-webkit-scrollbar {
+  display: none;
+}

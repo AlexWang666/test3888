@@ -1,0 +1,40 @@
+/*
+Header z-index: 1
+Navbar z-index: 0
+Page z-index: -1
+*/
+.header {
+  width: 100vw;
+  height: 5vh;
+  /* display: inline-block; */
+  /* justify-content: center;
+    align-content: center; */
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  position: fixed;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  background-color: white;
+}
+
+.logo {
+  max-width: 75%;
+  max-height: 75%;
+  position: relative;
+  float: left;
+
+  padding-left: 1.9%;
+}
+
+.title {
+  color: var(--primary);
+
+  margin-left: 1.5%;
+
+  position: relative;
+  float: left;
+  font-weight: 500;
+  font-size: 150%;
+}

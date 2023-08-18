@@ -1,0 +1,7 @@
+.drive-location-header {
+  border: 1px solid transparent;
+}
+
+.my-files-or-shared-container {
+  display: flex;
+}
